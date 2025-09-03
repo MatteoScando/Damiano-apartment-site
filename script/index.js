@@ -206,7 +206,7 @@ Cordiali saluti`;
  * Apre il form di richiesta preventivo via telefono
  */
 function requestQuotePhone() {
-    const phone = '+393489782057';
+    const phone = '+393534884032';
     
     const phoneUrl = `tel:${phone}`;
     

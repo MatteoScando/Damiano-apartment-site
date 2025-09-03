@@ -95,7 +95,7 @@ function initLightbox() {
         const lightboxHTML = `
             <div id="lightboxModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/75 animate-fadeIn">
                 <span class="absolute top-4 right-9 text-white text-4xl font-bold cursor-pointer z-[1001] hover:text-gray-300 transition-colors" onclick="closeLightbox()">&times;</span>
-                <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/75 bg-opacity-50 text-white text-3xl px-2.5 py-2.5 cursor-pointer border-none hover:bg-black/50 rounded" onclick="prevImage()">&lt;</button>
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/75 bg-opacity-50 text-white text-3xl px-2.5 py-2.5 cursor-pointer border-none hover:bg-black/50 rounded z-[1001]" onclick="prevImage()">&lt;</button>
                 <div class="relative max-w-[90%] max-h-[90%] flex justify-center items-center">
                     <img id="lightboxImage" src="" alt="" class="max-w-full max-h-[80vh] rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] object-contain">
                 </div>

@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #225777;
+  --text-color: #173054;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--text-color);
+}
+
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.hero-slider {
+  background: url(img/hero/image00014.jpg)50% 50% / cover no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.booking-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 15px 30px rgba(34, 87, 119, 0.15);
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    background-attachment: scroll;
+  }
+}
+ 

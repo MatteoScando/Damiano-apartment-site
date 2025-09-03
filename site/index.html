@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damiano Apartment Faenza - B&B vicino Ospedale San Pier Damiano</title>
+    <meta name="description" content="Damiano Apartment Faenza: appartamento B&B a 700m dall'ospedale San Pier Damiano. Affitto breve nel cuore di Faenza, 4 posti letto, cucina completa, parcheggio gratuito.">
+    <meta name="keywords" content="appartamento Faenza, B&B Faenza, affitto breve Faenza, appartamento vicino ospedale Faenza, dormire a Faenza, Damiano Apartment Faenza">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Damiano Apartment Faenza - Il tuo soggiorno di comfort">
+    <meta property="og:description" content="Appartamento B&B nel cuore di Faenza, a soli 700m dall'ospedale San Pier Damiano">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Import custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 w-full z-50 py-4 transition-all duration-300 font-bold">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="flex items-center"><img src="img/logos/logo-with-text.svg" alt="Damiano Apartment Logo With Name" class="h-12"></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#gallery" class="text-text-primary hover:text-primary transition-colors duration-300">Galleria</a>
+                    <a href="#location" class="text-text-primary hover:text-primary transition-colors duration-300">Posizione</a>
+                    <a href="#booking" class="text-text-primary hover:text-primary transition-colors duration-300">Prenota</a>
+                    <a href="#contact" class="text-text-primary hover:text-primary transition-colors duration-300">Contatti</a>
+                </div>
+                <button class="md:hidden text-primary" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#gallery" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Galleria</a>
+                    <a href="#location" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Posizione</a>
+                    <a href="#booking" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Prenota</a>
+                    <a href="#contact" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Contatti</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-slider min-h-screen flex items-center justify-center relative flex-col" >
+        <div class="w-full flex justify-center mb-6" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/logos/logo-with-text-2.svg" alt="Damiano Apartment Logo" class="h-110">
+        </div>
+        <div class="text-center z-10" data-aos="fade-up" data-aos-duration="1000">
+            <!-- <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow">Damiano Apartment</h1> -->
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4 text-white drop-shadow">Il tuo soggiorno di relax e comfort nel cuore di <span class=" text-primary font-bold drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]"> Faenza</span></p>
+            <a href="#booking" class="inline-block bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-103">
+                Prenota Ora
+            </a>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#gallery" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Scopri l'Appartamento</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Esplora gli spazi accoglienti e moderni del nostro appartamento nel cuore di Faenza</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(0)">
+                    <img src="img/gallery/thumbnails/image00008.jpg" alt="Immagine della galleria 1" class="w-full h-64 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(1)">
+                    <img src="img/gallery/thumbnails/image00009.jpg" alt="Immagine della galleria 2" class="w-full h-64 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(2)">
+                    <img src="img/gallery/thumbnails/image00010.jpg" alt="Immagine della galleria 3" class="w-full h-64 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(3)">
+                    <img src="img/gallery/thumbnails/image00011.jpg" alt="Immagine della galleria 4" class="w-full h-64 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(4)">
+                    <img src="img/gallery/thumbnails/image00012.jpg" alt="Immagine della galleria 5" class="w-full h-64 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(5)">
+                    <img src="img/gallery/thumbnails/image00013.jpg" alt="Immagine della galleria 6" class="w-full h-64 object-cover">
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-103 hover:shadow-md" onclick="openLightbox(6)">
+                    <img src="img/gallery/thumbnails/image000014.jpg" alt="Immagine della galleria 7" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Location Section -->
+    <section id="location" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Una Posizione Strategica</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Scopri il comfort del Damiano Apartment, a soli 700 metri dall'ospedale San Pier Damiano. 
+                    La nostra posizione strategica vicino al centro storico, supermercati, farmacie e servizi 
+                    ti permette di muoverti senza pensieri. Perfetto per famiglie, viaggi di lavoro o cure mediche, 
+                    con ampia facilità di parcheggio gratuito in strada.
+                </p>
+            </div>
+
+            <!-- Map Section -->
+            <div class="mb-16" data-aos="fade-up" data-aos-duration="1000">
+                <div class="max-w-6xl mx-auto">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1428.169122017195!2d11.87040313215347!3d44.28243226388441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4f204267a3d9%3A0x8b6a78c11476b85!2sDamiano%20Apartment!5e0!3m2!1sit!2sit!4v1753718242012!5m2!1sit!2sit" class="w-full h-130
+                        " style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Points of Interest Categories -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                
+                <!-- SANITÀ E SERVIZI MEDICI -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-red-100 w-16 h-16 flex items-center justify-center rounded-full mr-4">
+                            <i class="fas fa-hospital text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Salute</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Ospedale San Pier Damiano -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-red-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <!-- Left side with gradient and text -->
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Ospedale San Pier Damiano GVM</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/DD34bB5BoeWQ26AL6" target="_blank" class="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-red-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Right side with image -->
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/ospedale-san-pietro-damiano.jpg" alt="Hospital" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-red-500 mr-2"></i>
+                                    <span class="font-semibold">700m, 6 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ospedale degli Infermi -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-red-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Ospedale degli Infermi</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/nv4YbWNYQXw7qJkZ6" target="_blank" class="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-red-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/ospedale-degli-infermi.jpg" alt="Hospital" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-red-500 mr-2"></i>
+                                    <span class="font-semibold">1.0km, 14 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Farmacia -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-red-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Farmacia Comunale 2</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/onn8jkyuiFyknu9p9" target="_blank" class="flex items-center text-gray-600 hover:text-red-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-red-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/farmacia.png" alt="Pharmacy" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-red-500 mr-2"></i>
+                                    <span class="font-semibold">350m, 5 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RISTORAZIONE E VITA SOCIALE -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 w-16 h-16 flex items-center justify-center rounded-full mr-4">
+                            <i class="fas fa-utensils text-orange-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Ristoranti e Bar</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Pizzeria Farena -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-orange-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Pizzeria Farena</h4>
+                                <div class="space-y-2 text-gray-600">
+                                     <a href="https://maps.app.goo.gl/K2jnDgAkAKF6obqu8" target="_blank" class="flex items-center text-gray-600 hover:text-orange-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-orange-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-phone text-orange-500 mr-2"></i>
+                                        <span>0546605693</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/pizzeria-farena.png" alt="Pizzeria" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-orange-500 mr-2"></i>
+                                    <span class="font-semibold">600m, 8 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fiorentina Café -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-orange-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Fiorentina Cafè</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/ia3Wus2QCDNVnNEXA" target="_blank" class="flex items-center text-gray-600 hover:text-orange-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-orange-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/fiorentina-cafe.png" alt="Cafe" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-orange-500 mr-2"></i>
+                                    <span class="font-semibold">400m, 6 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gelateria -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-orange-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Gelateria Buono e Bio</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/ESRkMgKHfxPesx6A6" target="_blank" class="flex items-center text-gray-600 hover:text-orange-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-orange-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/gelateria.png" alt="Ice cream" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-orange-500 mr-2"></i>
+                                    <span class="font-semibold">200m, 1 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CULTURA E SVAGO -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 w-16 h-16 flex items-center justify-center rounded-full mr-4">
+                            <i class="fas fa-landmark text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Cultura e Svago</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Centro Storico -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-purple-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Piazza del Popolo, Centro Storico</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/PGmfUqgH8mrnyEN59" target="_blank" class="flex items-center text-gray-600 hover:text-purple-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-purple-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/piazza-del-popolo.png" alt="Historic Center" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-purple-500 mr-2"></i>
+                                    <span class="font-semibold">1km, 15 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Piscina -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-purple-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Piscina Comunale</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/5qLkbPvpuGkHELNBA" target="_blank" class="flex items-center text-gray-600 hover:text-purple-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-purple-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-phone text-purple-500 mr-2"></i>
+                                        <span>0546621012</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/piscina.png" alt="Swimming Pool" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-car text-purple-500 mr-2"></i>
+                                    <span class="font-semibold">2km, 5 min</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Parco Bucci -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-purple-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Parco Bucci</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/ZgZHE4HV72XxRaku5" target="_blank" class="flex items-center text-gray-600 hover:text-purple-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-purple-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/parco.png" alt="Park" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-car text-purple-500 mr-2"></i>
+                                    <span class="font-semibold">1.7km, 4 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SERVIZI ESSENZIALI -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 w-16 h-16 flex items-center justify-center rounded-full mr-4">
+                            <i class="fas fa-store text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Servizi</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Distributore -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-green-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Distributore Carburanti Tamoil</h4>
+                                 <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/31hPKZtwSqZgEKth8" target="_blank" class="flex items-center text-gray-600 hover:text-green-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-green-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/tamoil.png" alt="Gas Station" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-green-500 mr-2"></i>
+                                    <span class="font-semibold">250m, 2 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fermata Bus -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-green-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Fermata Autobus "Marconi Cimitero"</h4>
+                                 <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/uHMBFUo1ZoUhL5SJ9" target="_blank" class="flex items-center text-gray-600 hover:text-green-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-green-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/fermata-bus.png" alt="Bus Stop" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-green-500 mr-2"></i>
+                                    <span class="font-semibold">250m, 2 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lavanderia -->
+                        <div class="flex flex-col md:flex-row border-l-4 border-green-200 overflow-hidden rounded-lg shadow-md bg-white">
+                            <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                                <h4 class="font-semibold text-xl text-gray-800 mb-3">Lavanderia Lavasciuga</h4>
+                                 <div class="space-y-2 text-gray-600">
+                                    <a href="https://maps.app.goo.gl/E83Gd5hDJgY28JDa7" target="_blank" class="flex items-center text-gray-600 hover:text-green-500 transition-colors duration-300">
+                                        <i class="fas fa-map-marker-alt text-green-500 w-5"></i>
+                                        <span>Vedi su Google Maps</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 relative min-h-[200px] md:min-h-0">
+                                <img src="img/point-of-interest/thumbnails/lavanderia.png" alt="Laundry" class="w-full h-full object-cover absolute">
+                                <div class="absolute top-2 right-2 flex items-center bg-white/80 backdrop-blur-sm rounded-full text-sm px-3 py-1 shadow-md">
+                                    <i class="fas fa-walking text-green-500 mr-2"></i>
+                                    <span class="font-semibold">300m, 4 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Prenota il Tuo Soggiorno</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Scegli la modalità di prenotazione che preferisci per il tuo soggiorno da sogno</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" >
+                <!-- Booking.com -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="booking-card bg-white rounded-2xl p-8 text-center shadow-lg min-h-[312px]">
+                        <div class="mb-6">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bed text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Booking.com</h3>
+                            <p class="text-gray-600">Prenota attraverso la piattaforma più famosa al mondo</p>
+                        </div>
+                        <a href="https://www.booking.com/" target="_blank" class="w-full bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 cursor-pointer inline-block text-center">
+                            Vai a Booking.com
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Airbnb -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="booking-card bg-white rounded-2xl p-8 text-center shadow-lg min-h-[312px]">
+                        <div class="mb-6">
+                            <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-airbnb text-pink-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Airbnb</h3>
+                            <p class="text-gray-600">Esperienza autentica con la community globale</p>
+                        </div>
+                        <a href="https://www.airbnb.com/" target="_blank" class="w-full bg-pink-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-pink-700 transition-colors duration-300 cursor-pointer inline-block text-center">
+                            Vai a Airbnb
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Direct Contact - Featured -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="booking-card bg-primary text-white rounded-2xl p-8 text-center shadow-lg transform scale-105">
+                        <div class="mb-6">
+                            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Contattaci Direttamente e <span class="text-yellow-400">Risparmia</span>!</h3>
+                            <p class="text-blue-100">Evita i costi di commissione garantendo la miglior tariffa!</p>
+                        </div>
+                        <div class="flex justify-center gap-2">
+                            <button class="w-full bg-white text-primary py-3 px-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 cursor-pointer flex items-center justify-center" onclick="requestQuoteMail()">
+                                <span class="grow">Richiedi Preventivo</span> <i class="fas fa-envelope text-xl"></i>
+                            </button>
+                            <a href="tel:+393489782057" class="bg-white text-primary py-3 px-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 cursor-pointer flex items-center justify-center">
+                                <i class="fas fa-phone text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Contattaci</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Siamo a tua completa disposizione per qualsiasi informazione, 
+                    per offrirti un'accoglienza su misura per le tue esigenze.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-primary mb-8">Informazioni di Contatto</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Indirizzo</h4>
+                                <p class="text-gray-600">Via Luigi Einaudi, 6, 48018 Faenza RA, Italia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Telefono</h4>
+                                <a href="tel:+393489782057" class="text-primary hover:underline">+39 348 978 2057</a>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="flex items-center space-x-4">
+                            <div class="bg-primary w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">WhatsApp</h4>
+                                <a href="https://wa.me/TODO" target="_blank" class="text-primary hover:underline">Invia un messaggio</a>
+                            </div>
+                        </div> -->
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Email</h4>
+                                <a href="mailto:damiano.apartment@gmail.com" class="text-primary hover:underline">damiano.apartment@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Links and External Platforms -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-primary mb-8">Trovaci Anche Su</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <a href="#" target="_blank" class="bg-blue-600 text-white p-6 rounded-2xl text-center hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-bed text-3xl mb-3"></i>
+                            <h4 class="font-semibold text-lg">Booking.com</h4>
+                            <p class="text-blue-100 text-sm">Vedi le nostre recensioni</p>
+                        </a>
+                        
+                        <a href="#" target="_blank" class="bg-pink-600 text-white p-6 rounded-2xl text-center hover:bg-pink-700 transition-colors duration-300">
+                            <i class="fab fa-airbnb text-3xl mb-3"></i>
+                            <h4 class="font-semibold text-lg">Airbnb</h4>
+                            <p class="text-pink-100 text-sm">Scopri la nostra pagina</p>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-gray-50 rounded-2xl">
+                        <h4 class="font-semibold text-lg text-primary mb-3">Orari di Disponibilità</h4>
+                        <p class="text-gray-600 mb-2"><i class="fas fa-clock mr-2"></i>Lun - Dom: 8:00 - 22:00</p>
+                        <p class="text-gray-600"><i class="fas fa-mobile-alt mr-2"></i>Rispondiamo sempre nel minor tempo possibile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <!-- Contenuto Principale Footer -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+              <!-- Contatti -->
+              <div class="order-2 md:order-1">
+                <h4 class="font-semibold mb-4 text-blue-100">Contatti</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="flex items-center text-blue-100">
+                    <i class="fas fa-map-marker-alt mr-2 w-4"></i>
+                    <span>Via Luigi Einaudi, 6, 48018 Faenza RA</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-phone mr-2 w-4 text-blue-100"></i>
+                    <a href="tel:+393489782057" class="text-blue-200 hover:text-white transition-colors">
+                      +39 348 978 2057
+                    </a>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="fas fa-envelope mr-2 w-4 text-blue-100"></i>
+                    <a href="mailto:damiano.apartment@gmail.com" class="text-blue-200 hover:text-white transition-colors text-xs">
+                      damiano.apartment@gmail.com
+                    </a>
+                  </div>
+
+                  <h6 class="font-semibold mt-6 mb-4 text-blue-100">Link utili</h6>
+                  <a href="[TODO: inserire link Booking]" target="_blank"
+                     class="flex items-center text-blue-100 hover:text-white transition-colors text-sm">
+                    <i class="fas fa-bed mr-2 w-4"></i>Booking.com
+                  </a>
+                  <a href="[TODO: inserire link Airbnb]" target="_blank"
+                     class="flex items-center text-blue-100 hover:text-white transition-colors text-sm">
+                    <i class="fab fa-airbnb mr-2 w-4"></i>Airbnb
+                  </a>
+                </div>
+              </div>
+
+              <!-- Logo centrale (desktop), in alto su mobile -->
+              <div class="order-1 md:order-2 flex flex-col items-center text-center">
+                <div class="p-1 bg-white rounded">
+                  <img src="img/logos/logo-no-text.svg" alt="Damiano Apartment Logo" class="h-20">
+                </div>
+                <h2 class="text-2xl mt-2 font-bold">Damiano Apartment</h2>
+                <p class="text-blue-100 mt-2 text-sm max-w-xs">Soggiorno confortevole nel cuore di Faenza</p>
+              </div>
+
+              <!-- Menu -->
+              <div class="order-3 md:order-3 md:text-right">
+                <h4 class="font-semibold mb-4 text-blue-100">Menu</h4>
+                <div class="space-y-2 text-sm">
+                  <a href="#home" class="block text-blue-200 hover:text-white transition-colors">Home</a>
+                  <a href="#gallery" class="block text-blue-200 hover:text-white transition-colors">Galleria</a>
+                  <a href="#location" class="block text-blue-200 hover:text-white transition-colors">Posizione</a>
+                  <a href="#booking" class="block text-blue-200 hover:text-white transition-colors">Prenota</a>
+                  <a href="#contact" class="block text-blue-200 hover:text-white transition-colors">Contatti</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Separatore -->
+            <div class="border-t border-blue-100 pt-6 mt-8">
+              <!-- Dati Fiscali -->
+              <div class="text-center text-sm space-y-1">
+                <p class="text-blue-100 font-medium text-sm mb-1">&copy; 2025 Damiano apartment - Codice Fiscale: PSNGRL96T04A783S</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script/index.js"></script>
+</body>
+
+</html>

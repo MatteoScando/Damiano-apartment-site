@@ -3,13 +3,14 @@
 
 let currentIndex = 0;
 const images = [
-    "img/gallery/image00008.jpg",
-    "img/gallery/image00009.jpg",
-    "img/gallery/image00010.jpg",
-    "img/gallery/image00011.jpg",
-    "img/gallery/image00012.jpg",
-    "img/gallery/image00013.jpg",
-    "img/gallery/image000014.jpg",
+    "img/gallery/camera-1.jpg",
+    "img/gallery/camera-2.jpg",
+    "img/gallery/soggiorno-1.jpg",
+    "img/gallery/soggiorno-2.jpg",
+    "img/gallery/cucina-1.jpg",
+    "img/gallery/cucina-2.jpg",
+    "img/gallery/bagno-1.jpg",
+    "img/gallery/bagno-2.jpg",
 ];
 
 // Inizializzazione al caricamento della pagina

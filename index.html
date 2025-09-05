@@ -46,6 +46,7 @@
                 <a href="#home" class="flex items-center"><img src="img/logos/logo-with-text.svg" alt="Damiano Apartment Logo With Name" class="h-12"></a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#gallery" class="text-text-primary hover:text-primary transition-colors duration-300">Galleria</a>
+                    <a href="#servizi" class="text-text-primary hover:text-primary transition-colors duration-300">Servizi</a>
                     <a href="#location" class="text-text-primary hover:text-primary transition-colors duration-300">Posizione</a>
                     <a href="#booking" class="text-text-primary hover:text-primary transition-colors duration-300">Prenota</a>
                     <a href="#contact" class="text-text-primary hover:text-primary transition-colors duration-300">Contatti</a>
@@ -58,6 +59,7 @@
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
                     <a href="#gallery" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Galleria</a>
+                    <a href="#servizi" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Servizi</a>
                     <a href="#location" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Posizione</a>
                     <a href="#booking" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Prenota</a>
                     <a href="#contact" class="text-text-primary hover:text-primary transition-colors duration-300" onclick="toggleMobileMenu()">Contatti</a>
@@ -73,7 +75,8 @@
         </div>
         <div class="text-center z-10" data-aos="fade-up" data-aos-duration="1000">
             <!-- <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow">Damiano Apartment</h1> -->
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4 text-white drop-shadow">Il tuo soggiorno di relax e comfort nel cuore di <span class=" text-primary font-bold drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]"> Faenza</span></p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4 text-white drop-shadow">Il tuo soggiorno di relax e comfort nel cuore di <span class=" text-primary font-bold drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]"> Faenza</span> a soli 5 minuti a piedi dall'ospedale San Pier Damiano</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4 text-white drop-shadow"></p>
             <a href="#booking" class="inline-block bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/90 transition-all duration-300 transform hover:scale-103">
                 Prenota Ora
             </a>
@@ -122,6 +125,32 @@
         </div>
     </section>
 
+<section id="servizi" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Servizi</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Scopri i servizi offerti e le info sul nostro appartamento</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <i class="fas fa-wifi text-primary text-4xl mb-4"></i>
+                <p class="font-semibold">Wi-Fi</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <i class="fas fa-parking text-primary text-4xl mb-4"></i>
+                <p class="font-semibold">Parcheggio in strada</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <i class="fas fa-utensils text-primary text-4xl mb-4"></i>
+                <p class="font-semibold">Cucina con angolo cottura</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                <i class="fas fa-expand-arrows-alt text-primary text-4xl mb-4"></i>
+                <p class="font-semibold">struttura di 52 m²</p>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Location Section -->
     <section id="location" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
         <div class="container mx-auto px-4">
@@ -552,7 +581,7 @@
                                 <i class="fas fa-star text-yellow-400 text-2xl"></i>
                             </div>
                             <h3 class="text-2xl font-bold mb-2">Contattaci Direttamente e <span class="text-yellow-400">Risparmia</span>!</h3>
-                            <p class="text-blue-100">Evita i costi di commissione garantendo la miglior tariffa!</p>
+                            <p class="text-blue-100">Richiedi info sulla disponibilità e i prezzi</p>
                         </div>
                         <div class="flex justify-center gap-2">
                             <button class="w-full bg-white text-primary py-3 px-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 cursor-pointer flex items-center justify-center" onclick="requestQuoteMail()">

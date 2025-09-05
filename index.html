@@ -811,8 +811,10 @@
     </script>
     <!-- Floating WhatsApp Button -->
     <div id="whatsapp-button" class="fixed z-50 cursor-grab" style="right: 20px; top: 50%; transform: translateY(-50%);">
-        <img src="img/logos/WhatsApp_icon.png" alt="WhatsApp" class="w-16 h-16 rounded-2xl">
-        <button id="close-whatsapp" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold opacity-0 transition-opacity duration-300">X</button>
+        <div id="whatsapp-drag-handle" class="w-10 h-3 bg-gray-700 opacity-50 rounded-full flex items-center justify-center relative">
+            <button id="close-whatsapp" class="absolute left-11 top-1/2 -translate-y-1/2 z-10 bg-gray-700 bg-opacity-50 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold leading-none focus:outline-none">&times;</button>
+        </div>
+        <img src="img/logos/WhatsApp_icon.png" alt="WhatsApp" class="w-14 h-14">
     </div>
 
 </body>

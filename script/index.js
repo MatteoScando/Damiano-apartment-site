@@ -45,43 +45,53 @@ function initFloatingWhatsAppButton() {
     const closeButton = document.getElementById('close-whatsapp');
 
     let isDragging = false;
+    let hasDragged = false; // Flag per indicare se c'è stato un trascinamento
     let offsetX, offsetY;
+    const dragHandle = document.getElementById('whatsapp-drag-handle');
 
-    // Funzione per gestire l'inizio del trascinamento
-    whatsappButton.addEventListener('mousedown', (e) => {
-        // Prevent default behavior if it's a click on the close button
-        if (e.target === closeButton) return;
-
+    // Funzione per gestire l'inizio del trascinamento (mouse e touch)
+    const startDrag = (e) => {
         isDragging = true;
-        offsetX = e.clientX - whatsappButton.getBoundingClientRect().left;
-        offsetY = e.clientY - whatsappButton.getBoundingClientRect().top;
+        hasDragged = false; // Reset hasDragged all'inizio del trascinamento
+        const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+        offsetX = clientX - whatsappButton.getBoundingClientRect().left;
+        offsetY = clientY - whatsappButton.getBoundingClientRect().top;
         whatsappButton.style.cursor = 'grabbing';
-    });
+    };
 
-    // Funzione per gestire il trascinamento
-    document.addEventListener('mousemove', (e) => {
+    // Funzione per gestire il trascinamento (mouse e touch)
+    const onDrag = (e) => {
         if (!isDragging) return;
+        hasDragged = true; // Imposta hasDragged a true se c'è movimento
 
-        whatsappButton.style.left = `${e.clientX - offsetX}px`;
-        whatsappButton.style.top = `${e.clientY - offsetY}px`;
+        const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+        whatsappButton.style.left = `${clientX - offsetX}px`;
+        whatsappButton.style.top = `${clientY - offsetY}px`;
         whatsappButton.style.right = 'auto'; // Disabilita il posizionamento 'right' quando si trascina
         whatsappButton.style.transform = 'none'; // Disabilita il transform quando si trascina
-    });
+    };
 
-    // Funzione per gestire la fine del trascinamento
-    document.addEventListener('mouseup', () => {
+    // Funzione per gestire la fine del trascinamento (mouse e touch)
+    const endDrag = () => {
         isDragging = false;
         whatsappButton.style.cursor = 'grab';
-    });
+        // Ritarda il reset di hasDragged per evitare click accidentali dopo il trascinamento
+        setTimeout(() => { hasDragged = false; }, 100);
+    };
 
-    // Mostra/nascondi il tasto di chiusura al passaggio del mouse
-    whatsappButton.addEventListener('mouseenter', () => {
-        closeButton.classList.remove('opacity-0');
-    });
+    dragHandle.addEventListener('mousedown', startDrag);
+    dragHandle.addEventListener('touchstart', startDrag);
 
-    whatsappButton.addEventListener('mouseleave', () => {
-        closeButton.classList.add('opacity-0');
-    });
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('touchmove', onDrag);
+
+    document.addEventListener('mouseup', endDrag);
+    document.addEventListener('touchend', endDrag);
+
+
 
     // Rimuovi il tasto WhatsApp al click sul tasto di chiusura
     closeButton.addEventListener('click', (e) => {
@@ -91,7 +101,7 @@ function initFloatingWhatsAppButton() {
 
     // Apri il link WhatsApp al click sul tasto (se non è in fase di trascinamento)
     whatsappButton.addEventListener('click', () => {
-        if (!isDragging) {
+        if (!hasDragged) { // Controlla hasDragged invece di isDragging
             window.open('https://wa.me/393534884032', '_blank');
         }
     });

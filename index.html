@@ -21,7 +21,7 @@
     <meta property="og:locale" content="it_IT">
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/tailwindcss.js"></script>
     
     <!-- AOS Animation Library -->
     <link href="assets/aos-2.3.1/dist/aos.css" rel="stylesheet">
@@ -135,33 +135,35 @@
         </div>
     </section>
 
-<section id="servizi" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Servizi</h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Scopri i servizi offerti e le info sul nostro appartamento</p>
+    <!-- Servizi -->
+    <section id="servizi" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Servizi</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Scopri i servizi offerti e le info sul nostro appartamento</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <i class="fas fa-wifi text-primary text-4xl mb-4"></i>
+                    <p class="font-semibold">Wi-Fi</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <i class="fas fa-parking text-primary text-4xl mb-4"></i>
+                    <p class="font-semibold">Parcheggio in strada</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <i class="fas fa-utensils text-primary text-4xl mb-4"></i>
+                    <p class="font-semibold">Cucina con angolo cottura</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <i class="fas fa-expand-arrows-alt text-primary text-4xl mb-4"></i>
+                    <p class="font-semibold">struttura di 52 m²</p>
+                </div>
+            </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
-                <i class="fas fa-wifi text-primary text-4xl mb-4"></i>
-                <p class="font-semibold">Wi-Fi</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
-                <i class="fas fa-parking text-primary text-4xl mb-4"></i>
-                <p class="font-semibold">Parcheggio in strada</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
-                <i class="fas fa-utensils text-primary text-4xl mb-4"></i>
-                <p class="font-semibold">Cucina con angolo cottura</p>
-            </div>
-            <div class="bg-white rounded-2xl p-6 text-center shadow-lg">
-                <i class="fas fa-expand-arrows-alt text-primary text-4xl mb-4"></i>
-                <p class="font-semibold">struttura di 52 m²</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Location Section -->
+    </section>
+
+    <!-- Location Section -->
     <section id="location" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
         <div class="container mx-auto px-4">
             <!-- Header -->

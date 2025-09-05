@@ -26,16 +26,29 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
     <!-- Import custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        @font-face {
+            font-family: 'PT Serif';
+            src: url('font/PT_Serif/PTSerif-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'PT Serif';
+            src: url('font/PT_Serif/PTSerif-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
 
 </head>
 <body class="smooth-scroll overflow-x-hidden">
@@ -71,7 +84,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero-slider min-h-screen flex items-center justify-center relative flex-col" >
         <div class="w-full flex justify-center mb-6" data-aos="fade-up" data-aos-duration="1000">
-            <img src="img/logos/logo-with-text-2.svg" alt="Damiano Apartment Logo" class="h-100">
+            <img src="img/logos/logo-with-text-2.svg" alt="Damiano Apartment Logo" class="h-90">
         </div>
         <div class="text-center z-10" data-aos="fade-up" data-aos-duration="1000">
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto px-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">Il tuo soggiorno di relax e comfort nel cuore di <span class=" text-primary font-bold"> Faenza</span> a soli 5 minuti a piedi dall'ospedale San Pier Damiano</p>
@@ -167,8 +180,13 @@
             <div class="mb-16" data-aos="fade-up" data-aos-duration="1000">
                 <div class="max-w-6xl mx-auto">
                     <div class="rounded-2xl overflow-hidden shadow-2xl">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1428.169122017195!2d11.87040313215347!3d44.28243226388441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b4f204267a3d9%3A0x8b6a78c11476b85!2sDamiano%20Apartment!5e0!3m2!1sit!2sit!4v1753718242012!5m2!1sit!2sit" class="w-full h-130
-                        " style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div id="map" class="w-full h-130" style="height: 520px;"></div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="https://maps.app.goo.gl/epn9KDru9dvQ5yxb8" target="_blank" rel="noopener" class="text-primary hover:underline inline-flex items-center gap-2">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Apri in Google Maps</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -757,11 +775,37 @@
           </div>
     </footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="script/index.js"></script>
+
+    <!-- Map Init (Leaflet, no third-party cookies) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const lat = 44.28243226388441;
+            const lng = 11.87040313215347;
+            const map = L.map('map', {
+                scrollWheelZoom: false,
+                attributionControl: true
+            }).setView([lat, lng], 16);
+
+            // Privacy-friendly tiles (no cookies)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            // Marker
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup('Damiano Apartment')
+                .openPopup();
+        });
+    </script>
 </body>
 
 </html>

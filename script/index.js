@@ -30,7 +30,72 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inizializza il lightbox
     initLightbox();
+
+    // Inizializza il tasto WhatsApp fluttuante
+    initFloatingWhatsAppButton();
 });
+
+// === FLOATING WHATSAPP BUTTON FUNCTIONS ===
+
+/**
+ * Inizializza il tasto WhatsApp fluttuante, rendendolo trascinabile e rimovibile.
+ */
+function initFloatingWhatsAppButton() {
+    const whatsappButton = document.getElementById('whatsapp-button');
+    const closeButton = document.getElementById('close-whatsapp');
+
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    // Funzione per gestire l'inizio del trascinamento
+    whatsappButton.addEventListener('mousedown', (e) => {
+        // Prevent default behavior if it's a click on the close button
+        if (e.target === closeButton) return;
+
+        isDragging = true;
+        offsetX = e.clientX - whatsappButton.getBoundingClientRect().left;
+        offsetY = e.clientY - whatsappButton.getBoundingClientRect().top;
+        whatsappButton.style.cursor = 'grabbing';
+    });
+
+    // Funzione per gestire il trascinamento
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+
+        whatsappButton.style.left = `${e.clientX - offsetX}px`;
+        whatsappButton.style.top = `${e.clientY - offsetY}px`;
+        whatsappButton.style.right = 'auto'; // Disabilita il posizionamento 'right' quando si trascina
+        whatsappButton.style.transform = 'none'; // Disabilita il transform quando si trascina
+    });
+
+    // Funzione per gestire la fine del trascinamento
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        whatsappButton.style.cursor = 'grab';
+    });
+
+    // Mostra/nascondi il tasto di chiusura al passaggio del mouse
+    whatsappButton.addEventListener('mouseenter', () => {
+        closeButton.classList.remove('opacity-0');
+    });
+
+    whatsappButton.addEventListener('mouseleave', () => {
+        closeButton.classList.add('opacity-0');
+    });
+
+    // Rimuovi il tasto WhatsApp al click sul tasto di chiusura
+    closeButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent the click from bubbling up to the whatsappButton
+        whatsappButton.remove();
+    });
+
+    // Apri il link WhatsApp al click sul tasto (se non è in fase di trascinamento)
+    whatsappButton.addEventListener('click', () => {
+        if (!isDragging) {
+            window.open('https://wa.me/393534884032', '_blank');
+        }
+    });
+}
 
 // === NAVBAR FUNCTIONS ===
 
